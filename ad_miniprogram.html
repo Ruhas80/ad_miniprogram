@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Реклама</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <h1>Смотрите наше специальное предложение!</h1>
-    <p>После просмотра рекламы вы сможете продолжить смотреть фильм.</p>
-
-    <!-- Добавьте здесь изображение или видео с рекламой -->
-    <img src="https://example.com/your_ad_image.jpg" alt="Реклама" width="300">
-
-    <button onclick="sendBackToBot()">Я посмотрел рекламу</button>
+    <h1>Просмотрите рекламу</h1>
+    <p>Реклама помогает нам поддерживать бота. Спасибо за понимание!</p>
+    <button id="completeAd" onclick="completeAd()">Я просмотрел рекламу</button>
 
     <script>
-        function sendBackToBot() {
-            // Отправляем данные обратно в бот, подтверждая, что реклама просмотрена
-            Telegram.WebApp.sendData("ad_watched");
+        function completeAd() {
+            Telegram.WebApp.close(); // Закрываем Web App после завершения просмотра
         }
     </script>
 </body>
