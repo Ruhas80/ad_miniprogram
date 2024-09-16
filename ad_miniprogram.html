@@ -13,8 +13,8 @@
 
     <script>
         function completeAd() {
-            // Отправляем данные обратно в бота о завершении просмотра рекламы
-            Telegram.WebApp.sendData("ad_watched"); // отправляем событие "ad_watched"
+            // Отправляем данные в Telegram Web App
+            Telegram.WebApp.sendData("ad_watched"); // Здесь отправляем событие
             Telegram.WebApp.close(); // Закрываем Web App после завершения просмотра
         }
     </script>
